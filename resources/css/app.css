@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    /* Tipografi — başlıklar Sora, gövde Inter */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-display: 'Sora', 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+    /* Marka — turkuaz / teal */
+    --color-teal-50:  #ecfdfb;
+    --color-teal-100: #d0faf6;
+    --color-teal-200: #a4f2ec;
+    --color-teal-300: #6ee6df;
+    --color-teal-400: #34cfc9;
+    --color-teal-500: #15a3a8;
+    --color-teal-600: #0e8389;
+    --color-teal-700: #11696f;
+    --color-teal-800: #13545a;
+    --color-teal-900: #14464c;
+    --color-teal-950: #052a2e;
+
+    /* Aksan — mercan / coral */
+    --color-coral-50:  #fff2f0;
+    --color-coral-100: #ffe1dd;
+    --color-coral-200: #ffc8c0;
+    --color-coral-300: #ffa498;
+    --color-coral-400: #ff8b7c;
+    --color-coral-500: #ff7a6b;
+    --color-coral-600: #ed5240;
+    --color-coral-700: #c83b2b;
+    --color-coral-800: #a53427;
+    --color-coral-900: #883026;
+
+    --radius-4xl: 2rem;
+    --radius-5xl: 2.75rem;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-white text-slate-700 antialiased;
+        font-feature-settings: 'cv11', 'ss01';
+    }
+    h1, h2, h3, h4, h5 {
+        @apply font-display text-slate-900;
+        text-wrap: balance;
+    }
+    ::selection {
+        @apply bg-teal-500 text-white;
+    }
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold
+           transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+}
+
+@layer components {
+    .btn-primary {
+        @apply btn bg-teal-500 text-white shadow-lg shadow-teal-500/25
+               hover:bg-teal-600 hover:shadow-teal-600/30 hover:-translate-y-0.5 focus-visible:ring-teal-500;
+    }
+    .btn-accent {
+        @apply btn bg-coral-500 text-white shadow-lg shadow-coral-500/25
+               hover:bg-coral-600 hover:-translate-y-0.5 focus-visible:ring-coral-500;
+    }
+    .btn-ghost {
+        @apply btn bg-white text-teal-700 ring-1 ring-teal-200 hover:bg-teal-50 hover:ring-teal-300;
+    }
+    .btn-outline-white {
+        @apply btn bg-white/10 text-white ring-1 ring-white/40 backdrop-blur hover:bg-white/20;
+    }
+    .container-x {
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+    }
+    .eyebrow {
+        @apply inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-xs font-semibold
+               uppercase tracking-wider text-teal-700 ring-1 ring-teal-100;
+    }
+    .card {
+        @apply rounded-3xl bg-white ring-1 ring-slate-100 shadow-sm transition-all duration-300;
+    }
+    .card-hover {
+        @apply hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/60 hover:ring-teal-100;
+    }
+    .prose-clinic {
+        @apply max-w-none leading-relaxed text-slate-600
+               [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-slate-900
+               [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-slate-900
+               [&_p]:mb-5 [&_ul]:mb-5 [&_ul]:list-disc [&_ul]:pl-5 [&_li]:mb-2
+               [&_a]:font-medium [&_a]:text-teal-600 [&_a]:underline;
+    }
+}
+
+@layer utilities {
+    .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+    .animate-float {
+        animation: clinic-float 6s ease-in-out infinite;
+    }
+    @keyframes clinic-float {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-12px); }
+    }
+}

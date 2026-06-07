@@ -1,0 +1,58 @@
+# Yerel test için docker-compose. Production'da Coolify + Dockerfile kullanılır.
+
+services:
+  app:
+    build: .
+    image: dentila-dis:local
+    container_name: dentila-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      APP_NAME: "Dentila Diş Polikliniği"
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: ${APP_KEY:-}
+      APP_URL: http://localhost:8080
+      APP_LOCALE: tr
+      LOG_CHANNEL: stderr
+      LOG_LEVEL: warning
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: dentila_db
+      DB_USERNAME: dentila
+      DB_PASSWORD: ${DB_PASSWORD:-changeme}
+      SESSION_DRIVER: database
+      CACHE_STORE: database
+      QUEUE_CONNECTION: database
+      FILESYSTEM_DISK: public
+      MAIL_MAILER: log
+      RUN_MIGRATIONS: "true"
+      RUN_SEED: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - app-storage:/var/www/html/storage/app/public
+
+  db:
+    image: mysql:8.0
+    container_name: dentila-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: dentila_db
+      MYSQL_USER: dentila
+      MYSQL_PASSWORD: ${DB_PASSWORD:-changeme}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootchangeme}
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  app-storage:
+  db-data:
