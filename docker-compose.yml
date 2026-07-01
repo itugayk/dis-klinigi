@@ -3,13 +3,13 @@
 services:
   app:
     build: .
-    image: dentila-dis:local
-    container_name: dentila-app
+    image: mardent-dis:local
+    container_name: mardent-app
     restart: unless-stopped
     ports:
       - "8080:80"
     environment:
-      APP_NAME: "Dentila Diş Polikliniği"
+      APP_NAME: "Mardent Ağız ve Diş Sağlığı Polikliniği"
       APP_ENV: production
       APP_DEBUG: "false"
       APP_KEY: ${APP_KEY:-}
@@ -20,8 +20,8 @@ services:
       DB_CONNECTION: mysql
       DB_HOST: db
       DB_PORT: 3306
-      DB_DATABASE: dentila_db
-      DB_USERNAME: dentila
+      DB_DATABASE: mardent_db
+      DB_USERNAME: mardent
       DB_PASSWORD: ${DB_PASSWORD:-changeme}
       SESSION_DRIVER: database
       CACHE_STORE: database
@@ -38,11 +38,11 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: dentila-db
+    container_name: mardent-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: dentila_db
-      MYSQL_USER: dentila
+      MYSQL_DATABASE: mardent_db
+      MYSQL_USER: mardent
       MYSQL_PASSWORD: ${DB_PASSWORD:-changeme}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootchangeme}
     volumes:

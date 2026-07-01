@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Öncesi & Sonrası Galeri"
-    description="Dentila Diş Polikliniği'nde gerçekleştirdiğimiz tedavilerin gerçek öncesi ve sonrası sonuçları. Görseli kaydırarak değişimi keşfedin.">
+    description="Mardent Ağız ve Diş Sağlığı Polikliniği'nde gerçekleştirdiğimiz tedavilerin gerçek öncesi ve sonrası sonuçları. Görseli kaydırarak değişimi keşfedin.">
 
     <x-site.page-hero
         title="Öncesi & Sonrası Galeri"

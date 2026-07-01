@@ -27,8 +27,10 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Dentila Yönetim')
-            ->favicon('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🦷%3C/text%3E%3C/svg%3E')
+            ->brandName('MarDent Yönetim')
+            ->brandLogo(asset('images/brand/logo-icon.png'))
+            ->brandLogoHeight('2.5rem')
+            ->favicon(asset('images/brand/logo-icon.png'))
             ->colors([
                 'primary' => Color::Teal,
                 'danger'  => Color::Rose,

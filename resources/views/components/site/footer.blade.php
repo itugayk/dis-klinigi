@@ -22,9 +22,7 @@
         {{-- Marka --}}
         <div class="lg:col-span-1">
             <div class="flex items-center gap-2.5">
-                <span class="flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-500 text-white">
-                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-1.5 0-2.5.6-3.6 1C7.2 3.4 6 3.5 5 3.2 3.4 2.7 2 4 2 6.3c0 2 .5 3.3.9 5 .3 1.3.4 3 .7 4.6.3 1.7.7 4 1.7 5.4.5.7 1.4.9 2 .2.6-.8.8-2.3 1-3.6.2-1.4.5-2.6 1.7-2.6s1.5 1.2 1.7 2.6c.2 1.3.4 2.8 1 3.6.6.7 1.5.5 2-.2 1-1.4 1.4-3.7 1.7-5.4.3-1.6.4-3.3.7-4.6.4-1.7.9-3 .9-5C22 4 20.6 2.7 19 3.2c-1 .3-2.2.2-3.4-.2C14.5 2.6 13.5 2 12 2z"/></svg>
-                </span>
+                <img src="{{ asset('images/brand/logo-icon.png') }}" alt="{{ site('short_name') }}" class="h-10 w-10 object-contain">
                 <span class="font-display text-xl font-extrabold text-white">{{ site('short_name') }}</span>
             </div>
             <p class="mt-4 text-sm leading-relaxed text-slate-400">{{ site('description') }}</p>

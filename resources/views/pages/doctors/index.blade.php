@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Hekimlerimiz"
-    description="Dentila Diş Polikliniği'nin alanında uzman, deneyimli diş hekimi kadrosuyla tanışın.">
+    description="Mardent Ağız ve Diş Sağlığı Polikliniği'nin alanında uzman, deneyimli diş hekimi kadrosuyla tanışın.">
 
     <x-site.page-hero
         title="Hekimlerimiz"

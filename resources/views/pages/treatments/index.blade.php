@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Tedavilerimiz"
-    description="İmplanttan ortodontiye, estetik diş hekimliğinden çocuk diş sağlığına kadar tüm diş tedavileri Dentila Diş Polikliniği'nde.">
+    description="İmplanttan ortodontiye, estetik diş hekimliğinden çocuk diş sağlığına kadar tüm diş tedavileri Mardent Ağız ve Diş Sağlığı Polikliniği'nde.">
 
     <x-site.page-hero
         title="Tedavilerimiz"

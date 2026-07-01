@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
     {
         // Yönetici kullanıcı (Filament /admin girişi)
         User::updateOrCreate(
-            ['email' => 'admin@dentila.com'],
+            ['email' => 'admin@mardent.com.tr'],
             [
-                'name'     => 'Dentila Admin',
+                'name'     => 'MarDent Admin',
                 'password' => bcrypt('password'),
             ],
         );

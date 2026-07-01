@@ -303,7 +303,7 @@ class BookingWizard extends Component
     {
         return view('livewire.booking-wizard')->layout('components.layouts.app', [
             'title'       => 'Online Randevu Al',
-            'description' => 'Dentila Diş Polikliniği online randevu sistemi ile birkaç adımda kolayca randevunuzu oluşturun.',
+            'description' => 'Mardent Ağız ve Diş Sağlığı Polikliniği online randevu sistemi ile birkaç adımda kolayca randevunuzu oluşturun.',
         ]);
     }
 }

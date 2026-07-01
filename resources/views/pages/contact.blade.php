@@ -1,6 +1,6 @@
 <x-layouts.app
     title="İletişim"
-    description="Dentila Diş Polikliniği ile iletişime geçin. Adresimiz, telefon numaramız, çalışma saatlerimiz ve randevu talebi için iletişim formumuz.">
+    description="Mardent Ağız ve Diş Sağlığı Polikliniği ile iletişime geçin. Adresimiz, telefon numaramız, çalışma saatlerimiz ve randevu talebi için iletişim formumuz.">
 
     <x-site.page-hero
         title="İletişim"

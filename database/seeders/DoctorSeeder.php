@@ -13,51 +13,45 @@ class DoctorSeeder extends Seeder
     {
         $byName = Treatment::pluck('id', 'name');
 
+        // Not: isimler hasta yorumlarında geçen gerçek hekimlerdir; soyadı bilinmeyenler
+        // ve uzmanlık/deneyim detayları admin panelden tamamlanmalıdır. Fotoğraflar
+        // eklenene kadar photo_url boş bırakıldı (kart otomatik ikon gösterir).
         $doctors = [
             [
-                'title' => 'Doç. Dr. Dt.', 'name' => 'Elif Demir', 'specialty' => 'İmplantoloji & Cerrahi',
-                'specialties' => ['İmplant', 'Çene cerrahisi', 'Kemik greftleme'],
-                'experience_years' => 16,
-                'photo_url' => 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=600&q=80',
-                'bio' => "İstanbul Üniversitesi Diş Hekimliği Fakültesi mezunu olan Doç. Dr. Elif Demir, 16 yılı aşkın süredir implantoloji ve ağız-çene cerrahisi alanında çalışmaktadır.\n\nYurt içi ve yurt dışında çok sayıda eğitim ve kongreye katılmış olup, ileri implant cerrahisi konusunda uzmandır.",
-                'treatments' => ['İmplant Tedavisi', 'Kanal Tedavisi'],
+                'title' => 'Dt.', 'name' => 'Güler Kalkan', 'specialty' => 'İmplantoloji & Genel Diş Tedavisi',
+                'specialties' => ['İmplant', 'Genel diş tedavisi'],
+                'experience_years' => null,
+                'photo_url' => null,
+                'bio' => 'Hasta yorumlarında özenli, sabırlı ve ağrısız implant tedavisi süreciyle öne çıkıyor.',
+                'treatments' => ['İmplant Tedavisi'],
                 'saturday' => true,
             ],
             [
-                'title' => 'Uzm. Dt.', 'name' => 'Mehmet Kaya', 'specialty' => 'Ortodonti',
-                'specialties' => ['Şeffaf plak', 'Metal braket', 'Çocuk ortodontisi'],
-                'experience_years' => 12,
-                'photo_url' => 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80',
-                'bio' => "Ortodonti uzmanı Dt. Mehmet Kaya, şeffaf plak (clear aligner) ve klasik braket tedavilerinde geniş deneyime sahiptir.\n\nHer yaştan hastaya kişiye özel tedavi planları sunmaktadır.",
-                'treatments' => ['Ortodonti (Diş Teli)'],
+                'title' => 'Dt.', 'name' => 'Tacettin', 'specialty' => 'Endodonti (Kanal Tedavisi)',
+                'specialties' => ['Kanal tedavisi', 'Dolgu'],
+                'experience_years' => null,
+                'photo_url' => null,
+                'bio' => 'Kanal tedavisinde ilgi ve profesyonelliğiyle hastalarından yüksek memnuniyet alıyor.',
+                'treatments' => ['Kanal Tedavisi'],
                 'saturday' => false,
             ],
             [
-                'title' => 'Dt.', 'name' => 'Zeynep Yıldız', 'specialty' => 'Estetik Diş Hekimliği',
-                'specialties' => ['Gülüş tasarımı', 'Lamina', 'Zirkonyum', 'Beyazlatma'],
-                'experience_years' => 9,
-                'photo_url' => 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80',
-                'bio' => "Estetik diş hekimliği ve gülüş tasarımı alanında çalışan Dt. Zeynep Yıldız, dijital gülüş tasarımı (DSD) ve porselen lamina uygulamalarında uzmandır.\n\nMinimal müdahale ile doğal sonuçlar elde etmeyi ilke edinmiştir.",
-                'treatments' => ['Estetik Diş Hekimliği', 'Diş Beyazlatma'],
+                'title' => 'Dt.', 'name' => 'Selçuk İlhan', 'specialty' => 'Estetik Diş Hekimliği',
+                'specialties' => ['Gülüş tasarımı', 'Zirkonyum kaplama'],
+                'experience_years' => null,
+                'photo_url' => null,
+                'bio' => 'Gülüş tasarımı ve zirkonyum kaplama uygulamalarıyla hasta yorumlarında en çok övülen isimlerden.',
+                'treatments' => ['Estetik Diş Hekimliği'],
                 'saturday' => true,
             ],
             [
-                'title' => 'Dt.', 'name' => 'Ahmet Şahin', 'specialty' => 'Genel Diş Hekimliği & Endodonti',
-                'specialties' => ['Kanal tedavisi', 'Dolgu', 'Genel muayene'],
-                'experience_years' => 7,
-                'photo_url' => 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80',
-                'bio' => "Dt. Ahmet Şahin, genel diş hekimliği ve kanal tedavisi (endodonti) alanında hizmet vermektedir.\n\nHasta konforunu önceleyen, ağrısız tedavi tekniklerini benimser.",
-                'treatments' => ['Kanal Tedavisi', 'Diş Beyazlatma', 'Çocuk Diş Hekimliği'],
+                'title' => '', 'name' => 'İbrahim Babayiğit', 'specialty' => 'Estetik Diş Hekimliği',
+                'specialties' => ['Gülüş tasarımı', 'Zirkonyum kaplama'],
+                'experience_years' => null,
+                'photo_url' => null,
+                'bio' => 'Estetik diş tedavilerinde ekip içindeki katkısı hasta yorumlarında sıkça teşekkürle anılıyor.',
+                'treatments' => ['Estetik Diş Hekimliği'],
                 'saturday' => false,
-            ],
-            [
-                'title' => 'Uzm. Dt.', 'name' => 'Selin Aydın', 'specialty' => 'Pedodonti (Çocuk)',
-                'specialties' => ['Çocuk diş sağlığı', 'Koruyucu hekimlik', 'Fissür örtücü'],
-                'experience_years' => 10,
-                'photo_url' => 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80',
-                'bio' => "Çocuk diş hekimliği uzmanı Dt. Selin Aydın, minik hastaların diş hekimi korkusunu yenmelerine yardımcı olan sıcak yaklaşımıyla tanınır.\n\nKoruyucu uygulamalar ve süt dişi tedavilerinde deneyimlidir.",
-                'treatments' => ['Çocuk Diş Hekimliği'],
-                'saturday' => true,
             ],
         ];
 
@@ -93,16 +87,6 @@ class DoctorSeeder extends Seeder
                     'day_of_week' => 6, 'start_time' => '09:00', 'end_time' => '14:00', 'is_active' => true,
                 ]);
             }
-        }
-
-        // Örnek izin: Dr. Mehmet Kaya gelecek hafta 2 gün izinli
-        if ($mehmet = Doctor::where('slug', 'mehmet-kaya')->first()) {
-            $mehmet->timeOff()->delete();
-            $mehmet->timeOff()->create([
-                'start_date' => now()->next(\Carbon\Carbon::WEDNESDAY)->toDateString(),
-                'end_date'   => now()->next(\Carbon\Carbon::THURSDAY)->toDateString(),
-                'reason'     => 'Ortodonti kongresi',
-            ]);
         }
     }
 }
