@@ -31,8 +31,8 @@ class GalleryCaseResource extends Resource
                     Forms\Components\Select::make('treatment_id')->label('Tedavi')
                         ->relationship('treatment', 'name')->searchable()->preload(),
                     Forms\Components\TextInput::make('sort_order')->label('Sıra')->numeric()->default(0),
-                    Forms\Components\TextInput::make('before_url')->label('Öncesi görsel URL')->url()->required(),
-                    Forms\Components\TextInput::make('after_url')->label('Sonrası görsel URL')->url()->required(),
+                    Forms\Components\FileUpload::make('before_url')->label('Öncesi görseli')->image()->directory('gallery')->required(),
+                    Forms\Components\FileUpload::make('after_url')->label('Sonrası görseli')->image()->directory('gallery')->required(),
                     Forms\Components\Textarea::make('description')->label('Açıklama')->rows(2)->columnSpanFull(),
                     Forms\Components\Toggle::make('is_published')->label('Yayında')->default(true),
                 ]),
