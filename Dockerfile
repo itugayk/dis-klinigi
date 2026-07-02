@@ -39,44 +39,26 @@ RUN npm run build
 ### ============================================================
 FROM php:8.3-fpm-alpine AS runtime
 
-# ----- Sistem bağımlılıkları -----
+# ----- Sistem bağımlılıkları ve PHP Uzantıları -----
 RUN apk add --no-cache \
     nginx \
     supervisor \
     bash \
     curl \
-    icu-data-full \
-    icu-libs \
-    libpng \
-    libjpeg-turbo \
-    libwebp \
-    libzip \
-    oniguruma \
-    libxml2 \
-  && apk add --no-cache --virtual .build-deps \
-    icu-dev \
-    libpng-dev \
-    libjpeg-turbo-dev \
-    libwebp-dev \
-    libzip-dev \
-    oniguruma-dev \
-    libxml2-dev \
-    autoconf \
-    g++ \
-    make \
-  && docker-php-ext-configure intl \
-  && docker-php-ext-configure gd --with-jpeg --with-webp \
-  && docker-php-ext-install -j$(nproc) \
+    icu-data-full
+
+# mlocati script'i ile pre-compiled extension kurulumu (10 dakika yerine 30 saniye sürer)
+ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+RUN chmod +x /usr/local/bin/install-php-extensions && \
+    install-php-extensions \
     intl \
     pdo_mysql \
     mysqli \
     gd \
     zip \
-    mbstring \
     exif \
     bcmath \
-    opcache \
-  && apk del .build-deps
+    opcache
 
 # ----- PHP yapılandırması -----
 RUN { \
