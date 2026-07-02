@@ -59,14 +59,8 @@
                         <h2 class="text-lg font-bold text-slate-900">{{ $treatment->name }}</h2>
                     </div>
 
-                    {{-- Fiyat & Süre --}}
+                    {{-- Süre --}}
                     <div class="mt-6 space-y-3">
-                        @if($treatment->price_from)
-                            <div class="flex items-center justify-between rounded-2xl bg-slate-50 px-4 py-3">
-                                <span class="text-sm text-slate-500">Başlayan fiyat</span>
-                                <span class="text-lg font-bold text-slate-900">{{ number_format($treatment->price_from, 0, ',', '.') }} ₺</span>
-                            </div>
-                        @endif
                         @if($treatment->duration_minutes)
                             <div class="flex items-center justify-between rounded-2xl bg-slate-50 px-4 py-3">
                                 <span class="flex items-center gap-2 text-sm text-slate-500">

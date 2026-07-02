@@ -125,6 +125,28 @@ class ContentSeeder extends Seeder
             ['title' => 'Gülüş tasarımı ile diş boşluğu kapatma', 'Estetik Diş Hekimliği',
              'before' => '/images/gallery/case6_before.jpg',
              'after'  => '/images/gallery/case6_after.jpg'],
+            // Yeni eklenen öncesi-sonrası vakaları
+            ['title' => 'Estetik lamina veneer uygulaması', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba1_before.png',
+             'after'  => '/images/gallery/ba1_after.png'],
+            ['title' => 'Zirkonyum köprü ile diş tamamlama', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba2_before.png',
+             'after'  => '/images/gallery/ba2_after.png'],
+            ['title' => 'Kapsamlı gülüş tasarımı', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba3_before.png',
+             'after'  => '/images/gallery/ba3_after.png'],
+            ['title' => 'Ön diş estetik restorasyon', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba4_before.jpg',
+             'after'  => '/images/gallery/ba4_after.jpg'],
+            ['title' => 'Alt-üst çene estetik düzenleme', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba5_before.png',
+             'after'  => '/images/gallery/ba5_after.png'],
+            ['title' => 'Diş renk ve şekil düzeltme', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba6_before.jpg',
+             'after'  => '/images/gallery/ba6_after.jpg'],
+            ['title' => 'Tam ağız estetik yenileme', 'Estetik Diş Hekimliği',
+             'before' => '/images/gallery/ba7_before.png',
+             'after'  => '/images/gallery/ba7_after.png'],
         ];
 
         foreach ($cases as $i => $c) {

@@ -1,16 +1,16 @@
 <x-layouts.app
-    title="Öncesi & Sonrası Galeri"
+    title="Galeri — Tedavi Sonuçlarımız"
     description="Mardent Ağız ve Diş Sağlığı Polikliniği'nde gerçekleştirdiğimiz tedavilerin gerçek öncesi ve sonrası sonuçları. Görseli kaydırarak değişimi keşfedin.">
 
     <x-site.page-hero
-        title="Öncesi & Sonrası Galeri"
+        title="Galeri"
         subtitle="Gerçek hastalarımızın tedavi sonuçları. Görseli kaydırarak öncesi ve sonrası arasındaki değişimi kendiniz keşfedin."
         :crumbs="['Galeri' => null]" />
 
     <section class="container-x py-16 sm:py-24" x-data="{ filter: 'all' }">
         <x-site.section-heading
             eyebrow="Sonuçlarımız"
-            title="Tedavi sonuçlarımız"
+            title="Öncesi & Sonrası"
             subtitle="Tedavi türüne göre filtreleyerek ilgilendiğiniz alandaki dönüşümleri inceleyebilirsiniz." />
 
         @if($cases->isNotEmpty())

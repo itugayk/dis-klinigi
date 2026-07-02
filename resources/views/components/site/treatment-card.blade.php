@@ -12,11 +12,7 @@
     <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-500">{{ $treatment->excerpt }}</p>
 
     <div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-        @if($treatment->price_from)
-            <span class="text-sm text-slate-400">başlayan<br><span class="text-base font-bold text-slate-900">{{ number_format($treatment->price_from, 0, ',', '.') }} ₺</span></span>
-        @else
-            <span class="text-sm font-medium text-teal-600">Detaylı bilgi</span>
-        @endif
+        <span class="text-sm font-medium text-teal-600">Detaylı bilgi</span>
         <span class="flex h-9 w-9 items-center justify-center rounded-full bg-teal-50 text-teal-600 transition group-hover:bg-teal-500 group-hover:text-white">
             <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
         </span>

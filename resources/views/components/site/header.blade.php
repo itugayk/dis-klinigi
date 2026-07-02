@@ -40,7 +40,7 @@
 
     {{-- Ana navigasyon --}}
     <header
-        :class="scrolled ? 'bg-white/95 shadow-md shadow-slate-200/50 backdrop-blur' : 'bg-white/80 backdrop-blur'"
+        :class="scrolled ? 'bg-white shadow-md shadow-slate-200/50' : 'bg-white'"
         class="border-b border-slate-100 transition-all"
     >
         <nav class="container-x flex h-[72px] items-center justify-between">

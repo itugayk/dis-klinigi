@@ -152,27 +152,6 @@
         </div>
     </section>
 
-    {{-- ================================================ ÖNCESİ / SONRASI --}}
-    @if($cases->isNotEmpty())
-    <section class="bg-slate-50 py-16 sm:py-24">
-        <div class="container-x">
-            <x-site.section-heading
-                eyebrow="Sonuçlarımız"
-                title="Öncesi & Sonrası"
-                subtitle="Gerçek hastalarımızın tedavi sonuçları. Görseli kaydırarak değişimi keşfedin." />
-
-            <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach($cases as $case)
-                    <x-site.before-after :case="$case" />
-                @endforeach
-            </div>
-            <div class="mt-10 text-center">
-                <a href="{{ route('gallery') }}" class="btn-ghost">Tüm galeri</a>
-            </div>
-        </div>
-    </section>
-    @endif
-
     {{-- ===================================================== YORUMLAR --}}
     @if($testimonials->isNotEmpty())
     <section class="container-x py-16 sm:py-24">
