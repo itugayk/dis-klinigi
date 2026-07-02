@@ -43,10 +43,9 @@
             {{-- Görsel --}}
             <div class="reveal is-visible relative">
                 <div class="relative mx-auto max-w-md lg:max-w-none">
-                    <div class="relative overflow-hidden rounded-5xl bg-gradient-to-br from-teal-400 to-teal-600 shadow-2xl shadow-teal-500/30">
-                        <div class="absolute inset-0 flex items-center justify-center text-white/20"><x-site.icon name="tooth" class="h-40 w-40" /></div>
-                        <img src="/images/gallery/case6_after.jpg"
-                             alt="Gülümseyen mutlu hasta" onerror="this.remove()"
+                    <div class="relative overflow-hidden rounded-3xl bg-slate-100 ring-1 ring-slate-900/5 shadow-2xl shadow-teal-500/30">
+                        <img src="/images/hero-clinic.jpg"
+                             alt="Modern Diş Kliniği" onerror="this.remove()"
                              class="relative aspect-[4/5] w-full object-cover">
                     </div>
 

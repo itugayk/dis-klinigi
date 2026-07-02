@@ -40,8 +40,8 @@
 
     {{-- Ana navigasyon --}}
     <header
-        :class="scrolled ? 'bg-white shadow-md shadow-slate-200/50' : 'bg-white'"
-        class="border-b border-slate-100 transition-all"
+        :class="scrolled ? 'shadow-md shadow-slate-200/50' : ''"
+        class="bg-white border-b border-slate-100 transition-all"
     >
         <nav class="container-x flex h-[72px] items-center justify-between">
             {{-- Logo --}}
